@@ -1,14 +1,16 @@
 
 package com.pvdlageweg
 
-import akka.actor.{ ActorSystem, Props }
-import akka.io.Tcp.{ Received, Write }
-import akka.testkit.{ ImplicitSender, TestKit }
+import akka.actor.{ActorSystem, Props}
+import akka.io.Tcp.{Received, Write}
+import akka.testkit.{ImplicitSender, TestKit}
 import akka.util.ByteString
-import org.scalatest.{ BeforeAndAfterAll, Matchers, WordSpecLike }
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class EchoActorSpec extends TestKit(ActorSystem("MySpec")) with ImplicitSender
-  with WordSpecLike
+  with AnyWordSpecLike
   with Matchers
   with BeforeAndAfterAll {
 
